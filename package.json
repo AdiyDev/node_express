@@ -1,0 +1,29 @@
+{
+  "name": "node_min_express",
+  "version": "1.0.0",
+  "description": "custom express",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/AdiyDev/node_min_express.git"
+  },
+  "keywords": [
+    "express",
+    "node"
+  ],
+  "author": "adiyDev",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/AdiyDev/node_min_express/issues"
+  },
+  "homepage": "https://github.com/AdiyDev/node_min_express#readme",
+  "dependencies": {
+    "express": "^4.18.2"
+  },
+  "devDependencies": {
+    "nodemon": "^2.0.22"
+  }
+}
