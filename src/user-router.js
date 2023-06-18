@@ -8,10 +8,16 @@ const users = [
 ]
 
 router.get('/users', (req, res)=> {
+    if (req.params.id) {
+        return res.send(users.find(user => user.id === Number(req.params.id)))
+    }
     res.send(users)
 })
 
 router.post('/users', (req, res)=> {
+    const user = req.body
+    users.push(user)
+
     res.send(users)
 })
 
