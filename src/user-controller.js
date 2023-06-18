@@ -1,6 +1,6 @@
 const User = require('./user-modal')
 
-const getUsers =  async (req, res) => {
+const getUser =  async (req, res) => {
     let users
 
     if(req.params.id) {
