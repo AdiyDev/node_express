@@ -14,6 +14,10 @@ module.exports = class Application {
         this.middleware = []
     }
 
+    use(middleware) {
+        this.middleware.push(middleware)
+    }
+
     listen(port, callback) {
         this.server.listen(port, callback)
     }
@@ -25,6 +29,7 @@ module.exports = class Application {
             Object.keys(endpoint).forEach((method) => {
                 this.emitter.on(this._getRouteMask(path, method), (req, res) => {
                     const handler = endpoint[method]
+                    this.middleware.forEach((middleware) => middleware(req, res))                    
                     handler(req, res)
                 })
             })
