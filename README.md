@@ -1,1 +1,1 @@
-# project deprecated
+# deprecated
